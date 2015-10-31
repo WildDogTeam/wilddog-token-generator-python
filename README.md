@@ -1,6 +1,7 @@
 # Wilddog Token Generator - Python
 
 Wilddog允许用户使用自定义Token进行终端用户认证。Token采用的是安全的JSON Web Token(JWT)格式。
+
 关于token格式，请参阅文档：[https://z.wilddog.com/rule/guide/4] (https://z.wilddog.com/rule/guide/4)
 
 
