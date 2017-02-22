@@ -2,7 +2,9 @@
 
 Wilddog允许用户使用自定义Token进行终端用户认证。Token采用的是安全的JSON Web Token(JWT)格式。
 
-关于token格式，请参阅文档：[https://z.wilddog.com/rule/guide/4] (https://z.wilddog.com/rule/guide/4)
+关于token格式，请参阅文档：[https://docs.wilddog.com/guide/auth/server/server.html#生成-Custom-Token] (https://docs.wilddog.com/guide/auth/server/server.html#生成-Custom-Token)
+
+需要注意 : 本生成器只能生成适用于Auth2.0 sdk的 Custom Token 登录。
 
 
 ## 安全提示
@@ -19,11 +21,11 @@ Wilddog允许用户使用自定义Token进行终端用户认证。Token采用的
 ```python
 from wilddog_token_generator import create_token
 
-auth_payload = {"uid": "1", "provider": "custom"}
+auth_payload = {"uid": "1", "claim": "xxx"}
 token = create_token("<超级密钥>", auth_payload)
 ```
 
-payload必须含有"uid"字段。uid字段必须是字符串类型，长度小于256字节。 最终生成的token必须小于1024字节。
+payload必须含有"uid"字段。uid字段必须是字符串类型，长度小于64字节。 最终生成的token必须小于1024字节。
 
 
 ## Token Options
