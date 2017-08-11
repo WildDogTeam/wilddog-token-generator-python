@@ -19,6 +19,7 @@ class IdTokenVerifier:
 
     Raises:
         Exception
+        URL ERROR
     """
     def verifyIdToken(self, idtoken):
 

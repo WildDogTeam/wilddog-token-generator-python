@@ -69,3 +69,4 @@ idToken = result['idToken']
 
 其中isValid 为True代表idToken有效
 idToken的结构是idtoken_verify_result.py中的IdTokenResult类的结构数据
+用户需要捕获异常

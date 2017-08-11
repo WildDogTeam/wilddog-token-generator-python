@@ -1,4 +1,3 @@
-__author__ = 'wangxiaoliang'
 class IdTokenResult:
     def __init__(self, uid, name, email, picture):
         self.uid = uid;
