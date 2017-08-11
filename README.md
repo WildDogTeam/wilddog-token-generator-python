@@ -52,3 +52,20 @@ auth_payload = {"uid": "1", "provider": "custom"}
 options = {"admin": True}
 token = create_token("<超级密钥>", auth_payload, options)
 ```
+
+下面是校验idToken的示例代码:
+```python
+from idtoken_verifier import IdTokenVerifier
+
+appId = "$appId"
+token = "$token";
+
+idTokenVerifier = IdTokenVerifier(appId);
+result = idTokenVerifier.verifyIdToken(token);
+
+isValid = result['isValid']
+idToken = result['idToken']
+```
+
+其中isValid 为True代表idToken有效
+idToken的结构是idtoken_verify_result.py中的IdTokenResult类的结构数据
